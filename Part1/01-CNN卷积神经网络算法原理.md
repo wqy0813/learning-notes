@@ -54,7 +54,13 @@ $$y = \frac{e^{z} - e^{-z}}{e^{z} + e^{-z}} \Rightarrow y' = 1 - y^{2}$$
 ### 3. ReLU 函数
 
 **公式和导数：**
-$$y = \begin{cases} z & \text{if } z &gt; 0 \\ 0 & \text{if } z \leq 0 \end{cases} \Rightarrow y' = \begin{cases} 1 & \text{if } z &gt; 0 \\ 0 & \text{if } z \leq 0 \end{cases}$$
+$$y = \begin{cases} 
+z & \text{if } z > 0 \\ 
+0 & \text{if } z \leq 0 
+\end{cases} \Rightarrow y' = \begin{cases} 
+1 & \text{if } z > 0 \\ 
+0 & \text{if } z \leq 0 
+\end{cases}$$
 
 ![ReLU Activation Function](https://kimi-web-img.moonshot.cn/img/media.geeksforgeeks.org/3a53d21d1983ef755ac1beae27bd41ccbb9e158b.png)
 
@@ -70,7 +76,13 @@ $$y = \begin{cases} z & \text{if } z &gt; 0 \\ 0 & \text{if } z \leq 0 \end{case
 ### 4. Leaky ReLU 函数
 
 **公式和导数：**
-$$y = \begin{cases} z & \text{if } z &gt; 0 \\ az & \text{if } z \leq 0 \end{cases} \Rightarrow y' = \begin{cases} 1 & \text{if } z &gt; 0 \\ a & \text{if } z \leq 0 \end{cases} \quad (a \neq 0 \text{或} 1)$$
+$$y = \begin{cases} 
+z & \text{if } z > 0 \\ 
+az & \text{if } z \leq 0 
+\end{cases} \Rightarrow y' = \begin{cases} 
+1 & \text{if } z > 0 \\ 
+a & \text{if } z \leq 0 
+\end{cases} \quad (a \neq 0 \text{或} 1)$$
 
 ![Leaky ReLU Activation Function](https://kimi-web-img.moonshot.cn/img/media.geeksforgeeks.org/22b52471c5a749f44b0ba226ff87b4757b119430.jpg)
 
@@ -86,8 +98,6 @@ $$y = \begin{cases} z & \text{if } z &gt; 0 \\ az & \text{if } z \leq 0 \end{cas
 
 ### 前向传播流程
 输入 $x$ → 线性组合（权重·向量 + 偏置）→ 激活函数 → 输出预测值  
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&
-
 
 ### 损失函数
 
@@ -194,4 +204,3 @@ $$\text{输出大小} = \left\lfloor \frac{\text{输入大小} - \text{核大小
 | **Tanh** | $\frac{e^z-e^{-z}}{e^z+e^{-z}}$ | $(-1,1)$ | 0对称，收敛快 | 仍有梯度消失 |
 | **ReLU** | $\max(0,z)$ | $[0,+\infty)$ | 解决梯度消失，计算快 | 神经元死亡 |
 | **Leaky ReLU** | $\max(az,z)$ | $(-\infty,+\infty)$ | 解决死亡问题 | 一致性差 |
-
