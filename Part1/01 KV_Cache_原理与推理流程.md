@@ -312,7 +312,7 @@ $$
 但 Transformer 通常由多个 Block 堆叠而成，**上一层 Block 的输出，就是下一层 Block 的输入**。因此，还需要证明旧 Token 的表示在每一层都不变。
 
 假设原序列为 [A, B]，现在新增 Token C，以 Pre-LN Transformer 为例。
-![[Pasted image 20261016162232.png]]
+![Transformer Block 逐层复用历史 K/V](assets/20261016162232.png)
 
 ### ① 第一层：旧 Token 的 Block 输出不变
 
